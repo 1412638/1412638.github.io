@@ -6,15 +6,11 @@
 </head>
 
 <body>
-<div style="position: absolute;width: 1280;height:720px; border: 3px solid #ff0;left:0;right:0;margin: auto;">
-		
-		<video id='v' controls style="width: 640px;height: 400px;margin-top:180px;">
-		   <source src="video.mp4" type="video/mp4">
+<canvas id="c" width="1200" height="700"></canvas>
+		<video id="v" width="480" height="270" controls="" loop="">
+    			<source src="video.mp4" type="video/mp4">
 		</video>
-		<canvas style="position: absolute;left: 640px;width: 600px;height: 400px;margin-top:180px;" id='c'></canvas>
-	</div>
-
-<script>
+		<script>
 			function drawvideo(v,c,w,h) {
 				if(v.paused || v.ended) return false;
     			c.drawImage(v,660,215,w,h);
